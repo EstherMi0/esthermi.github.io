@@ -22,11 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
 //SLIDER:
 
 let currentIndex = 0;
-const visibleItems = 3; // Número de elementos visibles en el slider
+
+function getVisibleItems() {
+    return window.innerWidth <= 768 ? 1 : 3; // 1 elemento visible en móvil, 3 en escritorio
+}
 
 function moveSlide(n) {
     const slides = document.querySelectorAll('.slider-item');
     const totalSlides = slides.length;
+    const visibleItems = getVisibleItems();
 
     currentIndex += n;
 
@@ -42,6 +46,7 @@ function moveSlide(n) {
     const newTransformValue = `translateX(${-currentIndex * 100 / visibleItems}%)`;
     document.querySelector('.slider-wrapper').style.transform = newTransformValue;
 }
+
 // Manejar los eventos de clic en los botones del slider
 document.querySelectorAll('.modal-button').forEach((button, index) => {
     button.addEventListener('click', (event) => {
@@ -51,11 +56,19 @@ document.querySelectorAll('.modal-button').forEach((button, index) => {
         document.getElementById('modal-img').src = imgSrc;
     });
 });
+
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
-// Inicializar el slider para mostrar las primeras tres fotos correctamente
+
+// Inicializar el slider para mostrar las primeras fotos correctamente
 moveSlide(0);
+
+// Ajustar el slider al cambiar el tamaño de la pantalla
+window.addEventListener('resize', () => {
+    moveSlide(0);
+});
+
 
 
 // MENÚ MOVIL:
@@ -101,3 +114,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+

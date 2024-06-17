@@ -12,7 +12,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
     user-select: none;
-    background-image: url(./img/Sin\ título-1__.jpg);
+    background-image: url(./img/CV-foto.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -322,29 +322,38 @@ body{
         .slider {
             position: relative;
             width: 100%;
+            height: 50VW;
             max-width: 1200px;
-            margin: auto;
+            margin: 2% auto;
             overflow: hidden;
         }
         .slider-wrapper {
+            height: 37.5vw;
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
         .slider-item {
+            height: 37.5vw;
             min-width: calc(100% / 3); 
             box-sizing: border-box;
-            padding: 7px;
+            padding: 10px;
             position:relative;
             transition: 0.5s;
+            display:flex;
+            flex: 1;
+            overflow: hidden;
         }
         .slider-item img {
             width: 100%;
             height: auto;
             border-radius: 10px;
+            border:2px solid var(--turquesa);
+            object-fit: cover;
+            object-position:top;
         }
         .button-container{
-            width: 96.4%;
-            height: 50px;
+            width: 95%;
+            height: 45px;
             background-color: var(--turquesa);
             position: absolute;
             bottom: 0;
@@ -376,10 +385,11 @@ body{
             transform: translateY(-50%);
             background-color: var(--amarillo);
             color: var(--turquesa);
-            opacity: 68%;
+            font-size: 1.5em;
             border: none;
-            padding: 10px;
+            padding: 4px 12px;
             border-radius: 50%;
+            cursor: pointer;
         }
         .prev {
             left: 10px;
@@ -403,7 +413,7 @@ body{
             display: block;
             /* max-width: 90%;
             max-height: 90%; */
-            width: 35%;
+            width: auto;
             height: 100vh;
         }
         .close {
@@ -544,11 +554,111 @@ body{
 --------------------------------------------------------------- */
 
 
-@media screen and (min-width: 400px) and (max-width:900px) {
+@media screen and (min-width: 500px) and (max-width:900px) {
 
+body{
     
+    background-size: cover;
+    background-attachment: fixed;
+
+    &>header>section>h1{
+        font-size: 1.3em;
+    }
+    &>header>nav{
+        margin-top:40%;
+        margin-bottom: 24%;
+        &>a>i{
+            font-size: 1em;
+        }
+    }
+    &>header>section>div:nth-child(3){
+        padding: 0% 4%;
+        font-size: 1.5em;
+    }
+
+    #inicio>div{
+        top: 5.5%;
+        left: 29%;
+        &>h1{
+            font-size: 3em;
+        }
+        &>h2{
+            font-size: 1.2em;
+        }
+    }
+
+        &>main{
+            #sobremi{
+                padding-bottom: 36%;
+            }
+
+            #curriculum{
+                padding-bottom: 36%;
+
+                &>article{
+                    flex-direction: column;
+                    &>div:nth-child(1), &>div:nth-child(2){
+                        width: 90%;
+                        height: 30vw;
+                        overflow: scroll
+                        
+                    }
+                }
+            }
+
+            #portfolio{
+                .slider-wrapper {
+                    height: 31vw;
+                }
+                .slider-item {
+                    height: 31vw;
+                }
+                .button-container {
+                    width: 90.2%;
+                    opacity: 1;
+                    visibility: visible;
+                    height: 33px;
+                    &>a>i {
+                        font-size: 1.3em;
+                    }
+                }
+                .close {
+                    top: 12px;
+                    right: 70px;
+                }
+            }
+
+            #contacto{
+                &>h3{
+                    margin-left: 64px;
+                    margin-top: 20px;
+                    color:white;
+                }
+                &>article{
+                    height: 28vw;
+                    #mail{
+                        &>div:nth-child(1)>i{
+                            font-size: 4em;
+                        }
+                        &>div:nth-child(2)>p{
+                            font-size: 1em;
+                        }
+                    }
+                    #telf{
+                        &>div:nth-child(1)>i{
+                            font-size: 4em;
+                        }
+                        &>div:nth-child(2)>p{
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
 
 
+
+        }
+}
 }
 
 
@@ -918,37 +1028,46 @@ body{
             height: 100vh;
             display:flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: flex-start;
             padding: 0% 4%;
-            margin-top:97%;
+            margin-top:96%;
             background-color: white;
     
             .slider {
                 position: relative;
                 width: 100%;
+                height: 179VW;
                 max-width: 1200px;
-                margin: auto;
+                margin: 2% auto;
                 overflow: hidden;
             }
             .slider-wrapper {
+                height: 170vw;
                 display: flex;
                 transition: transform 0.5s ease-in-out;
             }
             .slider-item {
-                min-width: calc(100% / 3); 
+                height: 170vw;
+                min-width: calc(100% / 1); 
                 box-sizing: border-box;
-                padding: 7px;
+                padding: 10px;
                 position:relative;
                 transition: 0.5s;
+                display:flex;
+                flex: 1;
+                overflow: hidden;
             }
             .slider-item img {
                 width: 100%;
                 height: auto;
                 border-radius: 10px;
+                border:3px solid var(--turquesa);
+                object-fit: cover;
+                object-position:top;
             }
             .button-container{
-                width: 96.4%;
-                height: 50px;
+                width: 94.2%;
+                height: 45px;
                 background-color: var(--turquesa);
                 position: absolute;
                 bottom: 0;
@@ -958,9 +1077,9 @@ body{
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
                 cursor: pointer;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.7s ease, visibility 0.5s ease;
+                opacity: 1;
+                visibility: visible;
+                
                 &>a>i{
                     font-size: 1.8em;
                     color:white;
@@ -970,20 +1089,18 @@ body{
                     }
                 }
             }
-            .slider-item:hover .button-container {
-                opacity: 1;
-                visibility: visible;
-            }
+
             .slider-button {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 background-color: var(--amarillo);
                 color: var(--turquesa);
-                opacity: 68%;
+                font-size: 1.5em;
                 border: none;
-                padding: 10px;
+                padding: 4px 12px;
                 border-radius: 50%;
+                cursor: pointer;
             }
             .prev {
                 left: 10px;
@@ -1001,18 +1118,19 @@ body{
                 width: 100%;
                 height: auto;
                 background-color: rgba(0, 0, 0, 0.9);
+                margin-top: 47px;
             }
             .modal-content {
                 margin: auto;
                 display: block;
                 /* max-width: 90%;
                 max-height: 90%; */
-                width: 35%;
+                width: auto;
                 height: 100vh;
             }
             .close {
                 position: absolute;
-                top: 15px;
+                top: 60px;
                 right: 35px;
                 color: #f1f1f1;
                 font-size: 40px;
