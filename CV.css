@@ -612,6 +612,7 @@ body{
                 }
                 .slider-item {
                     height: 31vw;
+                    /* min-width: calc(100% / 2);  */
                 }
                 .button-container {
                     width: 90.2%;
