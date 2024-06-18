@@ -1255,7 +1255,8 @@ body{
 --------------------------------------------------------------
 --------------------------------------------------------------- */
 
-@media (max-height: 750px) {
+@media (min-height: 740px) and (max-height: 840px){
+
 
     body{
         &>main{
@@ -1265,7 +1266,8 @@ body{
             }
 
             #portfolio{
-                padding: 23% 4%;
+                padding: 14% 4%;
+/*                 margin-top:122%; */
                 .slider{
                     height: 139VW;
                 }
