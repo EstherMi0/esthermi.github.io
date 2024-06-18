@@ -718,11 +718,11 @@ body{
             color: white;
             width: 100%;
             background-color: var(--turquesa);
-            padding: 1.3% 2% ;
+            padding: 1.3% 5% ;
             cursor: pointer;
             position: fixed;
             top: 0em;
-            left:13em;
+            left:12em;
         }
         header #close-icon{
             left:0em;
@@ -858,7 +858,7 @@ body{
         position: relative;
         
         &>div{
-            width: 98%;
+            width:86%;
             position: absolute;
             top: 17%;
             left:9%;
@@ -1247,3 +1247,41 @@ body{
 
 }
 
+
+
+/* ------------------- ALTURA -------------------------------
+-------------------------------------------------------------
+---------------- ADAPTACIÓ AL MÒBIL -------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------- */
+
+@media (max-height: 750px) {
+
+    body{
+        &>main{
+
+            #curriculum{
+                padding: 28% 4%;
+            }
+
+            #portfolio{
+                padding: 23% 4%;
+                .slider{
+                    height: 139VW;
+                }
+                .slider-wrapper{
+                    height: 137vw;
+                }
+                .slider-item{
+                    height: 137vw;
+                }
+            }
+
+            #contacto>article{
+                height: 67vw;
+                margin-bottom: 14%;
+            }
+            
+        }
+    }
+}
